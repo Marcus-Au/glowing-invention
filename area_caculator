@@ -1,0 +1,15 @@
+function [s] = area_d(x,y1,y2)
+%UNTITLED3 求两条曲线的动态所夹面积
+%   此处显示详细说明
+for i=1:1:length(x)
+    M=zeros(1,i)
+    N=zeros(1,i)
+    for j=1:1:i
+      M(1,j)=y1(1,j);
+      N(1,j)=y2(1,j);
+
+     s(i,1)=trapz(M)-trapz(N)
+     end
+end
+
+end
